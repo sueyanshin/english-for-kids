@@ -1,0 +1,16 @@
+.video-card {
+    cursor: pointer;
+    background-color: #f4f4f4;
+    border-radius: 12px;
+    max-width: 400px;
+    /* width: 500px; */
+    margin: 20px;
+}
+
+.video-card img {
+    max-width: 100%;
+}
+
+.modal-dialog {
+    max-width: 600px;
+}

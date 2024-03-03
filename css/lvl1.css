@@ -1,0 +1,35 @@
+body {
+    background-image: url(../images/lvl1/lvl1-bg.png);
+}
+
+.topic-card {
+    cursor: pointer;
+    border-radius: 12px;
+    max-width: 500px;
+    /* height: 180px; */
+    transition: 0.5s all;
+
+    margin: 12px 12px 50px 12px;
+}
+
+.topic-card:hover {
+    background-color: #fff;
+
+}
+
+
+.topic-card .orange {
+    background-color: #F2994A;
+}
+
+.topic-card .yellow {
+    background-color: #F9E26C;
+}
+
+.topic-card-red {
+    background-color: #E85564;
+}
+
+.topic-card .cyan {
+    background-color: #2ECCA9;
+}

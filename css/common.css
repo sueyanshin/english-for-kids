@@ -1,0 +1,35 @@
+@font-face {
+    font-family: 'GothamRoundedMedium';
+    src: url('../fonts/GothamRoundedMedium.otf') format('opentype');
+}
+
+body {
+    font-family: 'GothamRoundedMedium', sans-serif;
+}
+
+.color-button {
+    color: #fff;
+    background-color: #00cdc4;
+    border: none;
+    padding: 12px;
+    border-radius: 12px;
+}
+
+.color-button:hover {
+    background-color: #00cdc3b8;
+}
+
+.lesson-card {
+    cursor: pointer;
+    background-color: #f4f4f4;
+    border-radius: 12px;
+    max-width: 250px;
+    margin: 12px;
+}
+
+@media only screen and (max-width: 767px) {
+    .lesson-card {
+        width: 100%;
+        /* Set the width of the element to 100% for mobile devices */
+    }
+}

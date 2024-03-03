@@ -1,0 +1,74 @@
+/* Section Hero */
+
+.hero {
+    background-color: #87F4F1;
+    border-radius: 0 0 20px 50%;
+}
+
+.hero h1 {
+    font-size: 48px;
+    color: #fff;
+    /* -webkit-text-stroke: 3px #009E99; */
+}
+
+.hero p {
+    font-size: 32px;
+    max-width: 500px;
+    color: #009E99;
+    -webkit-text-stroke: 1px #fff;
+
+
+}
+
+/* Section Play Today */
+.play-today h2 {
+    color: #1E1F74;
+    font-size: 48px;
+}
+
+.play-today p {
+    color: #009E99;
+    font-size: 32px;
+}
+
+/* Section Lvl-1 */
+.lvl-1 {
+    background-image: url('/images/index/lvl1-bg.png');
+    background-repeat: no-repeat;
+    height: 690px;
+}
+
+.lvl-1 h3 {
+    font-size: 20px;
+    color: #455df5;
+}
+
+.lvl-1 .lvl-card {
+    background-color: #fff;
+    height: 200px;
+    border-radius: 20px;
+}
+
+/* Section Lvl-2 */
+.lvl-2 {
+    background-image: url('/images/index/lvl2-bg.png');
+    background-repeat: no-repeat;
+    height: 690px;
+}
+
+.lvl-2 h3 {
+    font-size: 20px;
+    color: #455df5;
+}
+
+.lvl-2 .lvl-card {
+    background-color: #fff;
+    height: 200px;
+    border-radius: 20px;
+}
+
+.lvl-2 .btn {
+    cursor: not-allowed;
+}
+
+.lvl-2 .btn:hover {}

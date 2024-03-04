@@ -11,9 +11,9 @@ export default defineConfig({
       input: {
         main: resolve(__dirname, "index.html"),
         level1: resolve(__dirname, "level1/lvl1.html"),
-        level1: resolve(__dirname, "level1/topics.html"),
-        level1: resolve(__dirname, "level1/videos.html"),
-        level1: resolve(__dirname, "level1/audiobooks.html"),
+        topics: resolve(__dirname, "level1/topics.html"),
+        videos: resolve(__dirname, "level1/videos.html"),
+        audiobooks: resolve(__dirname, "level1/audiobooks.html"),
         makeFlashcard: resolve(__dirname, "makeFlashcard/index.html"),
       },
     },

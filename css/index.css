@@ -20,6 +20,8 @@
 
 }
 
+
+
 /* Section Play Today */
 .play-today h2 {
     color: #1E1F74;
@@ -29,6 +31,20 @@
 .play-today p {
     color: #009E99;
     font-size: 32px;
+}
+
+.play-today img {
+    cursor: pointer;
+    padding: 12px;
+    border: 1px solid #009E99;
+    border-radius: 20px;
+    transition: 0.4s all;
+}
+
+.play-today img:hover {
+    background-color: #87F4F1;
+    border: 1px solid #455df5;
+
 }
 
 /* Section Lvl-1 */

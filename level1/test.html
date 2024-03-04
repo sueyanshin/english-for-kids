@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <!-- Bootstrap -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="../css/common.css" />
+
+    <style>
+      .carousel-inner {
+        padding: 1em;
+      }
+      .card {
+        margin: 0 0.5em;
+        box-shadow: 2px 6px 8px 0 rgba(22, 22, 26, 0.18);
+        border: none;
+      }
+      .carousel-control-prev,
+      .carousel-control-next {
+        background-color: #e1e1e1;
+        width: 6vh;
+        height: 6vh;
+        border-radius: 50%;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+      @media (min-width: 768px) {
+        .carousel-item {
+          margin-right: 0;
+          flex: 0 0 33.333333%;
+          display: block;
+        }
+        .carousel-inner {
+          display: flex;
+        }
+      }
+      .card .img-wrapper {
+        max-width: 100%;
+        height: 13em;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .card img {
+        max-height: 100%;
+      }
+      @media (max-width: 767px) {
+        .card .img-wrapper {
+          height: 17em;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="carouselExampleControls" class="carousel">
+      <div class="carousel-inner">
+        <!-- Cards will be dynamically added here -->
+      </div>
+      <button
+        class="carousel-control-prev"
+        type="button"
+        data-bs-target="#carouselExampleControls"
+        data-bs-slide="prev"
+      >
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button
+        class="carousel-control-next"
+        type="button"
+        data-bs-target="#carouselExampleControls"
+        data-bs-slide="next"
+      >
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+
+    <!-- jQuery -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.0/jquery.min.js"
+      integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ="
+      crossorigin="anonymous"
+    ></script>
+    <!-- Bootstrap Bundle JS -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      $(document).ready(function () {
+        var images = [
+          "/images/animals/dog.png",
+          "/images/animals/dog.png",
+          "/images/animals/dog.png",
+          "/images/animals/dog.png",
+          "/images/animals/dog.png",
+          "/images/animals/dog.png",
+        ]; // Array of image URLs
+        var titles = [
+          "Card title 1",
+          "Card title 2",
+          "Card title 3",
+          "Card title 1",
+          "Card title 2",
+          "Card title 3",
+        ]; // Array of card titles
+
+        var carouselInner = $("#carouselExampleControls .carousel-inner");
+
+        // Loop through the arrays to create carousel items dynamically
+        for (var i = 0; i < images.length; i++) {
+          var activeClass = i === 0 ? "active" : ""; // Add 'active' class to the first item
+          var carouselItem = $("<div>").addClass(
+            "carousel-item " + activeClass
+          );
+          var card = $("<div>").addClass("card");
+
+          var imgWrapper = $("<div>").addClass("img-wrapper");
+          var img = $("<img>")
+            .addClass("d-block w-100")
+            .attr("src", images[i])
+            .attr("alt", "Image " + (i + 1));
+          imgWrapper.append(img);
+
+          var cardBody = $("<div>").addClass("card-body");
+          var cardTitle = $("<h5>").addClass("card-title").text(titles[i]);
+          var cardText = $("<p>")
+            .addClass("card-text")
+            .text(
+              "Some quick example text to build on the card title and make up the bulk of the card's content."
+            );
+          var btn = $("<a>")
+            .addClass("btn btn-primary")
+            .attr("href", "#")
+            .text("Go somewhere");
+          cardBody.append(cardTitle, cardText, btn);
+
+          card.append(imgWrapper, cardBody);
+          carouselItem.append(card);
+          carouselInner.append(carouselItem);
+        }
+
+        // Initialize the Bootstrap carousel after adding items
+        var carousel = new bootstrap.Carousel(
+          document.getElementById("carouselExampleControls"),
+          {
+            interval: false,
+          }
+        );
+      });
+    </script>
+  </body>
+</html>

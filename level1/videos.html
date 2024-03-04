@@ -18,6 +18,7 @@
     <link rel="stylesheet" href="../css/common.css" />
     <link rel="stylesheet" href="../css/videos.css" />
   </head>
+
   <body>
     <!-- Navbar -->
     <nav class="navbar bg-body-tertiary shadow-sm">
@@ -32,9 +33,7 @@
       </div>
     </nav>
 
-    <!-- PC size Topics -->
-
-    <div class="container text-center d-none d-sm-block mt-5">
+    <div class="container text-center mt-5">
       <div
         class="row row-cols-2 row-cols-lg-4 g-2 g-lg-3 d-flex justify-content-center"
       >
@@ -44,40 +43,179 @@
           class="col video-card shadow text-center"
           data-bs-toggle="modal"
           data-bs-target="#exampleModal"
+          onclick="showVideoModel('https://www.youtube.com/embed/VUiyR66H93I?si=XQnPVwv7MAWCh2bM3')"
         >
-          <img src="/images/videos/vd1.png" class="py-3" alt="Animal" />
+          <img src="/images/videos/vd1.png" class="py-3" alt="Shapes" />
           <p>Basic Shapes</p>
         </div>
 
         <!-- Card 2 -->
         <div
           class="col video-card shadow text-center"
-          onclick="goToTopics('animals')"
+          data-bs-toggle="modal"
+          data-bs-target="#exampleModal"
+          onclick="showVideoModel('https://www.youtube.com/embed/MefQ5yEjVL8?si=NzNfJISLL6a-_--E')"
         >
-          <img src="/images/videos/vd1.png" class="py-3" alt="Animal" />
-          <p>Medical Vocabulary</p>
+          <img src="/images/videos/vd2.png" class="py-3" alt="Food" />
+          <p>Food names</p>
         </div>
 
         <!-- Card 3 -->
         <div
           class="col video-card shadow text-center"
-          onclick="goToTopics('animals')"
+          data-bs-toggle="modal"
+          data-bs-target="#exampleModal"
+          onclick="showVideoModel('https://www.youtube.com/embed/aRs3IUHOrhc?si=kSYpWuEngiqBIyMn')"
         >
-          <img src="/images/videos/vd1.png" class="py-3" alt="Animal" />
-          <p>SchoolSupplies</p>
+          <img src="/images/videos/vd3-md.png" class="py-3" alt="Food" />
+          <p>Medical vocabulary</p>
+        </div>
+
+        <!-- Card 4 -->
+        <div
+          class="col video-card shadow text-center"
+          data-bs-toggle="modal"
+          data-bs-target="#exampleModal"
+          onclick="showVideoModel('https://www.youtube.com/embed/UiuUfDXihGg?si=bAT0-jbqNFH71FQe')"
+        >
+          <img src="/images/videos/vd4-ld.png" class="py-3" alt="Food" />
+          <p>At the Laundry</p>
+        </div>
+
+        <!-- Card 5 -->
+        <div
+          class="col video-card shadow text-center"
+          data-bs-toggle="modal"
+          data-bs-target="#exampleModal"
+          onclick="showVideoModel('https://www.youtube.com/embed/s5-0V8wIbxw?si=rVLYSciYcJMfjtFM')"
+        >
+          <img src="/images/videos/vd5-num.png" class="py-3" alt="Food" />
+          <p>Numbers from 1 to 10</p>
+        </div>
+        <!-- Card 6 -->
+        <div
+          class="col video-card shadow text-center"
+          data-bs-toggle="modal"
+          data-bs-target="#exampleModal"
+          onclick="showVideoModel('https://www.youtube.com/embed/dRvWNSEkWx8?si=DC1bq6uZ5O2Dw_Wf')"
+        >
+          <img src="/images/videos/vd6-count.png" class="py-3" alt="Food" />
+          <p>Learn to Count in English</p>
+        </div>
+
+        <!-- Card 7 -->
+        <div
+          class="col video-card shadow text-center"
+          data-bs-toggle="modal"
+          data-bs-target="#exampleModal"
+          onclick="showVideoModel('https://www.youtube.com/embed/2_iPWN41sTs?si=sfaJSh7jBG3byXCt')"
+        >
+          <img src="/images/videos/vd7-faceshape.png" class="py-3" alt="Food" />
+          <p>Parts of the Face</p>
+        </div>
+        <!-- Card 8 -->
+        <div
+          class="col video-card shadow text-center"
+          data-bs-toggle="modal"
+          data-bs-target="#exampleModal"
+          onclick="showVideoModel('https://www.youtube.com/embed/RNOZ0b8H_lA?si=wDimOpldEq60gES9')"
+        >
+          <img src="/images/videos/vd8-rainbow.png" class="py-3" alt="Food" />
+          <p>Rainbow Colors Name</p>
+        </div>
+
+        <!-- Card 9 -->
+        <div
+          class="col video-card shadow text-center"
+          data-bs-toggle="modal"
+          data-bs-target="#exampleModal"
+          onclick="showVideoModel('https://www.youtube.com/embed/eC64OGt04Nw?si=Ow_11lCVglJ79hBr')"
+        >
+          <img
+            src="/images/videos/vd9-schoolsupplies.png"
+            class="py-3"
+            alt="Food"
+          />
+          <p>School Supplies</p>
+        </div>
+        <!-- Card 10 -->
+        <div
+          class="col video-card shadow text-center"
+          data-bs-toggle="modal"
+          data-bs-target="#exampleModal"
+          onclick="showVideoModel('https://www.youtube.com/embed/GpZQfSnDzQs?si=YSGvzOG7BDxRHm4c')"
+        >
+          <img src="/images/videos/vd10-polaname.png" class="py-3" alt="Food" />
+          <p>Polar animals names</p>
+        </div>
+        <!-- Card 11 -->
+        <div
+          class="col video-card shadow text-center"
+          data-bs-toggle="modal"
+          data-bs-target="#exampleModal"
+          onclick="showVideoModel('https://www.youtube.com/embed/6cFWlfGqqvs?si=IV9vKM7Ayh2CDnlu')"
+        >
+          <img
+            src="/images/videos/vd11-descriptive.png"
+            class="py-3"
+            alt="Food"
+          />
+          <p>Descriptive Words: Big, Small</p>
+        </div>
+        <!-- Card 12 -->
+        <div
+          class="col video-card shadow text-center"
+          data-bs-toggle="modal"
+          data-bs-target="#exampleModal"
+          onclick="showVideoModel('https://www.youtube.com/embed/_X_ScvbaptE?si=2CXFKg-7jL0GiXkG')"
+        >
+          <img
+            src="/images/videos/vd12-spellinggame.png"
+            class="py-3"
+            alt="Food"
+          />
+          <p>Spelling Games for Kids</p>
+        </div>
+        <!-- Card 13 -->
+        <div
+          class="col video-card shadow text-center"
+          data-bs-toggle="modal"
+          data-bs-target="#exampleModal"
+          onclick="showVideoModel('https://www.youtube.com/embed/sePUdTTbuZs?si=k5rZjfeurStkLbFU')"
+        >
+          <img
+            src="/images/videos/vd13-oppositewords.png"
+            class="py-3"
+            alt="Food"
+          />
+          <p>Opposite Words</p>
+        </div>
+        <!-- Card 14 -->
+        <div
+          class="col video-card shadow text-center"
+          data-bs-toggle="modal"
+          data-bs-target="#exampleModal"
+          onclick="showVideoModel('https://www.youtube.com/embed/vin-_RbCGOQ?si=slj3d5pxIIHjVdMA')"
+        >
+          <img src="/images/videos/vd14-btfly.png" class="py-3" alt="Food" />
+          <p>How to Draw a Butterfly</p>
+        </div>
+        <!-- Card 15 -->
+        <div
+          class="col video-card shadow text-center"
+          data-bs-toggle="modal"
+          data-bs-target="#exampleModal"
+          onclick="showVideoModel('https://www.youtube.com/embed/rlIz_i4jajs?si=YWCvJXKIcgFKRFlE')"
+        >
+          <img
+            src="/images/videos/vd15-preposation.png"
+            class="py-3"
+            alt="Food"
+          />
+          <p>Prepositions: behind – on – by</p>
         </div>
       </div>
     </div>
-
-    <!-- Button trigger modal -->
-    <!-- <button
-      type="button"
-      class="btn btn-primary"
-      data-bs-toggle="modal"
-      data-bs-target="#exampleModal"
-    >
-      Launch demo modal
-    </button> -->
 
     <!-- Modal -->
     <div
@@ -100,25 +238,15 @@
           </div>
           <div class="modal-body">
             <iframe
+              id="videoFrame"
               width="560"
               height="315"
-              src="https://www.youtube.com/embed/VUiyR66H93I?si=XQnPVwv7MAWCh2bM"
               title="YouTube video player"
               frameborder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
               allowfullscreen
             ></iframe>
           </div>
-          <!-- <div class="modal-footer">
-            <button
-              type="button"
-              class="btn btn-secondary"
-              data-bs-dismiss="modal"
-            >
-              Close
-            </button>
-            <button type="button" class="btn btn-primary">Save changes</button>
-          </div> -->
         </div>
       </div>
     </div>
@@ -128,7 +256,13 @@
         window.location.href = topic + ".html";
       }
 
-      function showVideoModel() {}
+      function showVideoModel(videoUrl) {
+        var iframe = document.getElementById("videoFrame");
+        iframe.src = videoUrl;
+        // var modal=new bootstrap.Modal(document.getElementById('exampleModal'));
+        var modal = document.getElementById("exampleModal");
+        modal.show();
+      }
     </script>
 
     <script

@@ -25,7 +25,7 @@
     <link rel="stylesheet" href="../css/animals.css" />
 
     <style>
-      .sec-abc img {
+      .sec-lesson img {
         cursor: pointer;
       }
     </style>
@@ -62,22 +62,22 @@
       </div>
     </nav>
 
-    <!-- Section ABC -->
-    <div class="sec-abc container pt-5" id="sec-abc">
+    <!-- Section Lesson -->
+    <div class="sec-lesson container pt-5" id="sec-lesson">
       <div class="row">
         <div class="col-md-2" onclick="pronounce('c')">
           <img src="/images/c.png" alt="" />
         </div>
-        <div class="col-md-2" onclick="pronounce('asr')">
+        <div class="col-md-2" onclick="pronounce('south pat pal')">
           <img src="/images/c.png" alt="" />
         </div>
-        <div class="col-md-2" onclick="pronounce('c')">
+        <div class="col-md-2" onclick="pronounce('fay loe ma')">
           <img src="/images/c.png" alt="" />
         </div>
-        <div class="col-md-2" onclick="pronounce('c')">
+        <div class="col-md-2" onclick="pronounce('south paw')">
           <img src="/images/c.png" alt="" />
         </div>
-        <div class="col-md-2" onclick="pronounce('c')">
+        <div class="col-md-2" onclick="pronounce('taw thar')">
           <img src="/images/c.png" alt="" />
         </div>
         <div class="col-md-2" onclick="pronounce('c')">
@@ -88,12 +88,12 @@
 
     <!-- Section Quiz -->
 
-    <div class="container-fluid text-center p-5">
+    <div class="container-fluid text-center p-3">
       <div class="row">
         <div class="col-md-6 mx-auto my-auto align-items-center">
-          <div class="start-screen">
+          <div class="start-screen mt-5">
             <button
-              class="btn btn-warning d-none"
+              class="btn btn-warning d-none m-5"
               id="start-button"
               onclick="startQuiz()"
             >
@@ -123,262 +123,43 @@
               Next
             </button>
           </div>
-          <div class="score-container d-none" id="score-container">
-            <div id="user-score">Demo Score</div>
+          <div class="score-container d-none mt-5" id="score-container">
+            <div id="user-score" class="p-5">Demo Score</div>
+
             <button id="restart" class="btn btn-warning">Restart</button>
           </div>
         </div>
       </div>
     </div>
 
+    <script src="../js/quiz.js"></script>
     <script>
-      //References
-      let timeLeft = document.querySelector(".time-left");
-      let quizContainer = document.getElementById("container");
-      let nextBtn = document.getElementById("next-button");
-      let countOfQuestion = document.querySelector(".number-of-question");
-      let restart = document.getElementById("restart");
-      let userScore = document.getElementById("user-score");
-      let startScreen = document.querySelector(".start-screen");
-      let questionCount;
-      let scoreCount = 0;
-      let count = 11;
-      let countdown;
-      let label = document.getElementById("modeLabel");
-      let secAbc = document.getElementById("sec-abc");
-      let startButton = document.getElementById("start-button");
-      let displayContainer = document.getElementById("display-container");
-      let scoreContainer = document.getElementById("score-container");
-
-      function updateModelLabel(checkbox) {
-        if (checkbox.checked) {
-          label.textContent = "Quiz Mode 📝";
-          secAbc.classList.add("d-none");
-          pronounce(
-            "This is quiz mode.Now, you have to answer some of the questions."
-          );
-          startButton.classList.remove("d-none");
-        } else {
-          label.textContent = "Learning Mode 👨‍🏫";
-          secAbc.classList.remove("d-none");
-          startButton.classList.add("d-none");
-          displayContainer.classList.add("d-none");
-          scoreContainer.classList.add("d-none");
-        }
-      }
-
-      //Questions and Options array
-
       const quizArray = [
         {
           id: "0",
-          question: "Which is the most widely spoken language in the world?",
-          options: ["Spanish", "Mandarin", "English", "German"],
-          correct: "Mandarin",
+          question: "A",
+          options: ["A", "B", "C", "D"],
+          correct: "A",
         },
         {
-          id: "1",
-          question:
-            "Which is the only continent in the world without a desert?",
-          options: ["North America", "Asia", "Africa", "Europe"],
-          correct: "Europe",
+          id: "0",
+          question: "A",
+          options: ["A", "B", "C", "D"],
+          correct: "A",
         },
         {
-          id: "2",
-          question: "Who invented Computer?",
-          options: [
-            "Charles Babbage",
-            "Henry Luce",
-            "Henry Babbage",
-            "Charles Luce",
-          ],
-          correct: "Charles Babbage",
+          id: "0",
+          question: "A",
+          options: ["A", "B", "C", "D"],
+          correct: "A",
         },
         {
-          id: "3",
-          question:
-            "What do you call a computer on a network that requests files from another computer?",
-          options: ["A client", "A host", "A router", "A web server"],
-          correct: "A client",
-        },
-        {
-          id: "4",
-          question:
-            "Hardware devices that are not part of the main computer system and are often added later to the system.",
-          options: ["Peripheral", "Clip art", "Highlight", "Execute"],
-          correct: "Peripheral",
-        },
-        {
-          id: "5",
-          question:
-            "The main computer that stores the files that can be sent to computers that are networked together is:",
-          options: ["Clip art", "Mother board", "Peripheral", "File server"],
-          correct: "File server",
-        },
-        {
-          id: "6",
-          question: "How can you catch a computer virus?",
-          options: [
-            "Sending e-mail messages",
-            "Using a laptop during the winter",
-            "Opening e-mail attachments",
-            "Shopping on-line",
-          ],
-          correct: "Opening e-mail attachments",
-        },
-        {
-          id: "7",
-          question: "Google (www.google.com) is a:",
-          options: [
-            "Search Engine",
-            "Number in Math",
-            "Directory of images",
-            "Chat service on the web",
-          ],
-          correct: "Search Engine",
-        },
-        {
-          id: "8",
-          question: "Which is not an Internet protocol?",
-          options: ["HTTP", "FTP", "STP", "IP"],
-          correct: "STP",
-        },
-        {
-          id: "9",
-          question: "Which of the following is not a valid domain name?",
-          options: [
-            "www.yahoo.com",
-            "www.yahoo.co.uk",
-            "www.com.yahoo",
-            "www.yahoo.co.in",
-          ],
-          correct: "www.com.yahoo",
+          id: "0",
+          question: "A",
+          options: ["A", "B", "C", "D"],
+          correct: "A",
         },
       ];
-
-      //Quiz Creation
-      function quizCreator() {
-        quizArray.sort(() => Math.random() - 0.5);
-        for (let i of quizArray) {
-          i.options.sort(() => Math.random() - 0.5);
-          let div = document.createElement("div");
-          div.classList.add("container-mid", "d-none");
-          //question number
-          countOfQuestion.innerHTML =
-            1 + " of " + quizArray.length + " Question";
-          //question
-          let question_DIV = document.createElement("p");
-          question_DIV.classList.add("question");
-          question_DIV.innerHTML = i.question;
-          div.appendChild(question_DIV);
-          //options
-          div.innerHTML += `
-    <button class="option-div" onclick="checker(this)">${i.options[0]}</button>
-     <button class="option-div" onclick="checker(this)">${i.options[1]}</button>
-      <button class="option-div" onclick="checker(this)">${i.options[2]}</button>
-       <button class="option-div" onclick="checker(this)">${i.options[3]}</button>
-    `;
-          quizContainer.appendChild(div);
-        }
-      }
-
-      //Restart Quiz
-      restart.addEventListener("click", () => {
-        initial();
-        displayContainer.classList.remove("d-none");
-        scoreContainer.classList.add("d-none");
-      });
-
-      //Next Button
-      nextBtn.addEventListener(
-        "click",
-        (displayNext = () => {
-          questionCount += 1;
-          if (questionCount == quizArray.length) {
-            displayContainer.classList.add("d-none");
-            scoreContainer.classList.remove("d-none");
-            //user score
-            userScore.innerHTML =
-              "Your score is " + scoreCount + " out of " + questionCount;
-          } else {
-            //display questionCount
-            countOfQuestion.innerHTML =
-              questionCount + 1 + " of " + quizArray.length + " Question";
-            //display quiz
-            quizDisplay(questionCount);
-            count = 11;
-            clearInterval(countdown);
-            timerDisplay();
-          }
-        })
-      );
-
-      //Timer
-      const timerDisplay = () => {
-        countdown = setInterval(() => {
-          count--;
-          timeLeft.innerHTML = `${count}s`;
-          if (count == 0) {
-            clearInterval(countdown);
-            displayNext();
-          }
-        }, 1000);
-      };
-
-      //Display quiz
-      const quizDisplay = (questionCount) => {
-        let quizCards = document.querySelectorAll(".container-mid");
-        //d-none other cards
-        quizCards.forEach((card) => {
-          card.classList.add("d-none");
-        });
-        //display current question card
-        quizCards[questionCount].classList.remove("d-none");
-      };
-
-      function startQuiz() {
-        startButton.classList.add("d-none");
-        displayContainer.classList.remove("d-none");
-        initial();
-      }
-
-      function checker(userOption) {
-        let userSolution = userOption.innerText;
-        let question =
-          document.getElementsByClassName("container-mid")[questionCount];
-        let options = question.querySelectorAll(".option-div");
-
-        //if user clicked answer == correct option stored in object
-        if (userSolution === quizArray[questionCount].correct) {
-          userOption.classList.add("correct");
-          scoreCount++;
-        } else {
-          userOption.classList.add("incorrect");
-          //For marking the correct option
-          options.forEach((element) => {
-            if (element.innerText == quizArray[questionCount].correct) {
-              element.classList.add("correct");
-            }
-          });
-        }
-        clearInterval(countdown);
-        //disable all options
-        options.forEach((element) => {
-          element.disabled = true;
-        });
-      }
-
-      //initial setup
-      function initial() {
-        quizContainer.innerHTML = "";
-        questionCount = 0;
-        scoreCount = 0;
-        count = 11;
-        clearInterval(countdown);
-        timerDisplay();
-        quizCreator();
-        quizDisplay(questionCount);
-      }
     </script>
   </body>
 </html>

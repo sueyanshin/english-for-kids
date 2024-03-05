@@ -60,69 +60,118 @@
     <!-- Section Quiz -->
 
     <!-- Section Lesson Start -->
-    <div id="carouselExampleControls" class="carousel">
-      <div class="carousel-inner d-flex">
-        <div class="carousel-item active text-center">
-          <div class="card">
-            <div class="mx-auto">
-              <img src="/images/animals/dog.png" class="d-block" alt="..." />
+    <div class="container-fluid" id="sec-lesson">
+      <div id="carouselExampleControls" class="carousel">
+        <div class="carousel-inner d-flex">
+          <div class="carousel-item active text-center">
+            <div class="card">
+              <div class="mx-auto">
+                <img src="/images/animals/dog.png" class="d-block" alt="..." />
+              </div>
+              <div class="card-body bg-warning">
+                <h5 class="card-title">Dog</h5>
+                <button class="btn btn-outline-dark" onclick="pronounce('Dog')">
+                  <i class="fa-solid fa-volume-high"></i>
+                </button>
+              </div>
             </div>
-            <div class="card-body bg-warning">
-              <h5 class="card-title">Dog</h5>
-              <button class="btn btn-outline-dark" onclick="pronounce('Dog')">
-                <i class="fa-solid fa-volume-high"></i>
-              </button>
+          </div>
+          <div class="carousel-item active text-center">
+            <div class="card">
+              <div class="mx-auto">
+                <img src="/images/animals/cat.png" class="d-block" alt="..." />
+              </div>
+              <div class="card-body bg-warning">
+                <h5 class="card-title">Cat</h5>
+                <button class="btn btn-outline-dark" onclick="pronounce('Cat')">
+                  <i class="fa-solid fa-volume-high"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item active text-center">
+            <div class="card">
+              <div class="mx-auto">
+                <img src="/images/animals/dog.png" class="d-block" alt="..." />
+              </div>
+              <div class="card-body bg-warning">
+                <h5 class="card-title">Dog</h5>
+                <button class="btn btn-outline-dark" onclick="pronounce('Dog')">
+                  <i class="fa-solid fa-volume-high"></i>
+                </button>
+              </div>
             </div>
           </div>
         </div>
-        <div class="carousel-item active text-center">
-          <div class="card">
-            <div class="mx-auto">
-              <img src="/images/animals/cat.png" class="d-block" alt="..." />
-            </div>
-            <div class="card-body bg-warning">
-              <h5 class="card-title">Cat</h5>
-              <button class="btn btn-outline-dark" onclick="pronounce('Cat')">
-                <i class="fa-solid fa-volume-high"></i>
-              </button>
-            </div>
-          </div>
-        </div>
-        <div class="carousel-item active text-center">
-          <div class="card">
-            <div class="mx-auto">
-              <img src="/images/animals/dog.png" class="d-block" alt="..." />
-            </div>
-            <div class="card-body bg-warning">
-              <h5 class="card-title">Dog</h5>
-              <button class="btn btn-outline-dark" onclick="pronounce('Dog')">
-                <i class="fa-solid fa-volume-high"></i>
-              </button>
-            </div>
-          </div>
-        </div>
+        <button
+          class="carousel-control-prev"
+          type="button"
+          data-bs-target="#carouselExampleControls"
+          data-bs-slide="prev"
+        >
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button
+          class="carousel-control-next"
+          type="button"
+          data-bs-target="#carouselExampleControls"
+          data-bs-slide="next"
+        >
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
       </div>
-      <button
-        class="carousel-control-prev"
-        type="button"
-        data-bs-target="#carouselExampleControls"
-        data-bs-slide="prev"
-      >
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Previous</span>
-      </button>
-      <button
-        class="carousel-control-next"
-        type="button"
-        data-bs-target="#carouselExampleControls"
-        data-bs-slide="next"
-      >
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Next</span>
-      </button>
     </div>
 
     <!-- Section Lesson End -->
+
+    <!-- Section Quiz -->
+
+    <div class="container-fluid text-center p-3">
+      <div class="row">
+        <div class="col-md-6 mx-auto my-auto align-items-center">
+          <div class="start-screen mt-5">
+            <button
+              class="btn btn-warning d-none m-5"
+              id="start-button"
+              onclick="startQuiz()"
+            >
+              Start
+            </button>
+          </div>
+          <div id="display-container" class="card p-3 d-none">
+            <div
+              class="header d-flex justify-content-between align-items-center border-bottom p-2"
+            >
+              <div class="number-of-count">
+                <span class="number-of-question">1 of 3 questions</span>
+              </div>
+              <div class="timer-div">
+                <!-- <img src="./images/common/timer.webp" width="20" alt="Timer" /> -->
+                <i class="fa-regular fa-clock"></i>
+                <span class="time-left">10s</span>
+              </div>
+            </div>
+            <div id="container">
+              <!-- questions and options will be displayed here -->
+            </div>
+            <button
+              id="next-button"
+              class="btn btn-warning col-md-6 mx-auto my-3"
+            >
+              Next
+            </button>
+          </div>
+          <div class="score-container d-none mt-5" id="score-container">
+            <div id="user-score" class="p-5">Demo Score</div>
+
+            <button id="restart" class="btn btn-warning">Restart</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.0/jquery.min.js"
       integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ="
@@ -134,9 +183,44 @@
       crossorigin="anonymous"
     ></script>
 
-    <!-- <script src="../js/quiz.js"></script> -->
+    <script src="../js/quiz.js"></script>
+
     <script src="../js/speech.js"></script>
     <script>
+      const quizArray = [
+        {
+          id: "0",
+          question: "Which is the most widely spoken language in the world?",
+          options: ["Spanish", "Mandarin", "English", "German"],
+          correct: "Mandarin",
+        },
+        {
+          id: "1",
+          question:
+            "Which is the only continent in the world without a desert?",
+          options: ["North America", "Asia", "Africa", "Europe"],
+          correct: "Europe",
+        },
+        {
+          id: "2",
+          question: "Who invented Computer?",
+          options: [
+            "Charles Babbage",
+            "Henry Luce",
+            "Henry Babbage",
+            "Charles Luce",
+          ],
+          correct: "Charles Babbage",
+        },
+        {
+          id: "3",
+          question:
+            "What do you call a computer on a network that requests files from another computer?",
+          options: ["A client", "A host", "A router", "A web server"],
+          correct: "A client",
+        },
+      ];
+
       $(document).ready(function () {
         var multipleCardCarousel = $("#carouselExampleControls");
         if (window.matchMedia("(min-width: 768px)").matches) {
@@ -186,45 +270,6 @@
           multipleCardCarousel.addClass("slide");
         }
       });
-
-      // function updateModelLabel(checkbox) {
-      //   let label = document.getElementById("modeLabel");
-      //   let startButton = document.getElementById("start-button");
-      //   if (checkbox.checked) {
-      //     label.textContent = "Quiz Mode 📝";
-      //     startButton.classList.remove("d-none");
-
-      //     // startButton.classList.remove("d-none");
-
-      //     initial();
-      //   } else {
-      //     label.textContent = "Learning Mode 👨‍🏫";
-      //     startScreen.classList.add("d-none"); // Show the start screen when switching to learning mode
-      //     // displayContainer.classList.add("hide"); // Hide the quiz container when switching to learning mode
-      //   }
-      // }
-      function updateModelLabel(checkbox) {
-        let label = document.getElementById("modeLabel");
-        let startButton = document.getElementById("start-button");
-        let startScreen = document.querySelector(".start-screen");
-        let displayContainer = document.getElementById("display-container");
-
-        if (checkbox.checked) {
-          label.textContent = "Quiz Mode 📝";
-          startButton.classList.remove("d-none");
-
-          initial();
-        } else {
-          label.textContent = "Learning Mode 👨‍🏫";
-          if (startScreen) {
-            // startScreen.classList.remove("hide");
-          }
-          if (displayContainer) {
-            displayContainer.classList.add("hide");
-            displayContainer.classList.add("d-none");
-          }
-        }
-      }
     </script>
 
     <script

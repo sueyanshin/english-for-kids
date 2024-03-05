@@ -25,7 +25,7 @@ export default defineConfig({
         face: resolve(__dirname, "level1/face-parts.html"),
         number: resolve(__dirname, "level1/number.html"),
         body: resolve(__dirname, "level1/body.html"),
-        // animals: resolve(__dirname, "level1/animals.html"),
+        fruitNvegetable: resolve(__dirname, "level1/vegetables.html"),
       },
     },
   },

@@ -7,6 +7,10 @@ body {
     font-family: 'GothamRoundedMedium', sans-serif;
 }
 
+.nav-item .active {
+    color: #00cdc4 !important
+}
+
 .color-button {
     color: #fff;
     background-color: #00cdc4;

@@ -20,7 +20,7 @@
   </head>
   <body>
     <!-- Navbar -->
-    <nav class="navbar bg-body-tertiary shadow-sm">
+    <!-- <nav class="navbar bg-body-tertiary shadow-sm">
       <div class="container">
         <a class="navbar-brand" href="../index.html">
           <img
@@ -30,15 +30,72 @@
           />
         </a>
       </div>
+    </nav> -->
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+      <div class="container">
+        <a class="navbar-brand" href="../index.html">
+          <img
+            src="/images/common/logo-lingo.svg"
+            alt="Logo"
+            class="d-inline-block align-text-top"
+          />
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link" href="../index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="topics.html" aria-current="page"
+                >Topics</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="videos.html">Videos</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="audiobooks.html">Audiobooks</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="songs.html">Songs</a>
+            </li>
+          </ul>
+        </div>
+      </div>
     </nav>
 
     <!-- PC size Topics -->
 
-    <div class="container text-center d-none d-sm-block">
+    <div class="container text-center d-none d-sm-block pt-3">
       <div
         class="row row-cols-2 row-cols-lg-4 g-2 g-lg-3 d-flex justify-content-center"
       >
         <!-- First Row -->
+
+        <!-- Card 1 -->
+        <div
+          class="col lesson-card shadow text-center"
+          onclick="goToTopics('alphabets')"
+        >
+          <img
+            src="/images/topics/alphabets.png"
+            class="py-3"
+            alt="alphabets"
+          />
+          <p>Alphabets</p>
+        </div>
+
         <!-- Card 1 -->
         <div
           class="col lesson-card shadow text-center"
@@ -60,38 +117,38 @@
         <!-- Card 3 -->
         <div
           class="col lesson-card shadow text-center"
-          onclick="goToTopics('sports')"
+          onclick="goToTopics('month')"
         >
-          <img src="/images/topics/sports.png" class="py-3" alt="Sports" />
-          <p>Sports</p>
+          <img src="/images/topics/months.png" class="py-3" alt="month" />
+          <p>Months</p>
         </div>
 
         <!-- Card 4 -->
         <div
           class="col lesson-card shadow text-center"
-          onclick="goToTopics('verbToBe')"
+          onclick="goToTopics('face-parts')"
         >
-          <img src="/images/topics/vToBe.png" class="py-3" alt="Clothes" />
-          <p>Verbs to be</p>
+          <img src="/images/topics/face.png" class="py-3" alt="Face" />
+          <p>Face</p>
         </div>
 
         <!-- Second Row -->
         <!-- Card 1 -->
         <div
           class="col lesson-card shadow text-center"
-          onclick="goToTopics('weeks')"
+          onclick="goToTopics('number')"
         >
-          <img src="/images/topics/weeks.png" class="py-3" alt="Weeks" />
-          <p>Weeks</p>
+          <img src="/images/topics/number.png" class="py-3" alt="number" />
+          <p>Number</p>
         </div>
 
         <!-- Card 2 -->
         <div
           class="col lesson-card shadow text-center"
-          onclick="goToTopics('foods')"
+          onclick="goToTopics('body')"
         >
-          <img src="/images/topics/foods.png" class="py-3" alt="Foods" />
-          <p>Foods</p>
+          <img src="/images/topics/body.png" class="py-3" alt="Body" />
+          <p>Body</p>
         </div>
 
         <!-- Card 3 -->
@@ -108,13 +165,13 @@
         </div>
 
         <!-- Card 4 -->
-        <div
+        <!-- <div
           class="col lesson-card shadow text-center"
           onclick="goToTopics('clothes')"
         >
           <img src="/images/topics/clothes.png" class="py-3" alt="Clothes" />
           <p>Clothes</p>
-        </div>
+        </div> -->
       </div>
     </div>
 
@@ -125,6 +182,20 @@
         class="row row-cols-2 row-cols-lg-4 g-2 g-lg-3 d-flex justify-content-center"
       >
         <!-- First Row -->
+
+        <!-- Card 1 -->
+        <div
+          class="col lesson-card shadow text-center"
+          onclick="goToTopics('alphabets')"
+        >
+          <img
+            src="/images/topics/alphabets.png"
+            class="py-3"
+            alt="alphabets"
+          />
+          <p>Alphabets</p>
+        </div>
+
         <!-- Card 1 -->
         <div
           class="col lesson-card shadow text-center"
@@ -146,38 +217,38 @@
         <!-- Card 3 -->
         <div
           class="col lesson-card shadow text-center"
-          onclick="goToTopics('sports')"
+          onclick="goToTopics('month')"
         >
-          <img src="/images/topics/sports.png" class="py-3" alt="Sports" />
-          <p>Sports</p>
+          <img src="/images/topics/months.png" class="py-3" alt="month" />
+          <p>Months</p>
         </div>
 
         <!-- Card 4 -->
         <div
           class="col lesson-card shadow text-center"
-          onclick="goToTopics('verbToBe')"
+          onclick="goToTopics('face-parts')"
         >
-          <img src="/images/topics/vToBe.png" class="py-3" alt="Clothes" />
-          <p>Verbs to be</p>
+          <img src="/images/topics/face.png" class="py-3" alt="Face" />
+          <p>Face</p>
         </div>
 
         <!-- Second Row -->
         <!-- Card 1 -->
         <div
           class="col lesson-card shadow text-center"
-          onclick="goToTopics('weeks')"
+          onclick="goToTopics('number')"
         >
-          <img src="/images/topics/weeks.png" class="py-3" alt="Weeks" />
-          <p>Weeks</p>
+          <img src="/images/topics/number.png" class="py-3" alt="number" />
+          <p>Number</p>
         </div>
 
         <!-- Card 2 -->
         <div
           class="col lesson-card shadow text-center"
-          onclick="goToTopics('foods')"
+          onclick="goToTopics('Body')"
         >
-          <img src="/images/topics/foods.png" class="py-3" alt="Foods" />
-          <p>Foods</p>
+          <img src="/images/topics/body.png" class="py-3" alt="Body" />
+          <p>Body</p>
         </div>
 
         <!-- Card 3 -->

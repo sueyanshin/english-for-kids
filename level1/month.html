@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Animals</title>
+    <link rel="icon" href="/fav-icon.png" />
+
+    <!-- Bootstrap -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <!-- Fontawesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- CSS -->
+    <link rel="stylesheet" href="../css/common.css" />
+    <link rel="stylesheet" href="../css/quiz.css" />
+    <link rel="stylesheet" href="../css/animals.css" />
+    <style>
+      .card img {
+        height: 200px;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar bg-body-tertiary shadow-sm">
+      <div class="container">
+        <a class="navbar-brand" href="../index.html">
+          <img
+            src="/images/common/logo-lingo.svg"
+            alt="Logo"
+            class="d-inline-block align-text-top"
+          />
+        </a>
+
+        <div class="form-check form-switch form-check-reverse">
+          <input
+            class="form-check-input"
+            type="checkbox"
+            role="switch"
+            id="flexSwitchCheckDefault"
+            onchange="updateModelLabel(this)"
+          />
+          <label
+            class="form-check-label"
+            for="flexSwitchCheckDefault"
+            id="modeLabel"
+            >Learning Mode 👨‍🏫</label
+          >
+        </div>
+      </div>
+    </nav>
+
+    <!-- Section NavBar End -->
+    <!-- Section Quiz -->
+
+    <!-- Section Lesson Start -->
+    <div class="container-fluid" id="sec-lesson">
+      <div id="carouselExampleControls" class="carousel">
+        <div class="carousel-inner d-flex">
+          <div class="carousel-item active text-center">
+            <div class="card">
+              <div class="mx-auto">
+                <img
+                  src="/images/months/months1-jan.png"
+                  class="d-block"
+                  alt="..."
+                />
+              </div>
+              <div class="card-body bg-warning">
+                <h5 class="card-title">January</h5>
+                <button
+                  class="btn btn-outline-dark"
+                  onclick="pronounce('January')"
+                >
+                  <i class="fa-solid fa-volume-high"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item active text-center">
+            <div class="card">
+              <div class="mx-auto">
+                <img
+                  src="/images/months/february.png"
+                  class="d-block"
+                  alt="..."
+                />
+              </div>
+              <div class="card-body bg-warning">
+                <h5 class="card-title">February</h5>
+                <button
+                  class="btn btn-outline-dark"
+                  onclick="pronounce('February')"
+                >
+                  <i class="fa-solid fa-volume-high"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item active text-center">
+            <div class="card">
+              <div class="mx-auto">
+                <img src="/images/months/march.png" class="d-block" alt="..." />
+              </div>
+              <div class="card-body bg-warning">
+                <h5 class="card-title">March</h5>
+                <button
+                  class="btn btn-outline-dark"
+                  onclick="pronounce('March')"
+                >
+                  <i class="fa-solid fa-volume-high"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="carousel-item active text-center">
+            <div class="card">
+              <div class="mx-auto">
+                <img src="/images/months/april.png" class="d-block" alt="..." />
+              </div>
+              <div class="card-body bg-warning">
+                <h5 class="card-title">April</h5>
+                <button
+                  class="btn btn-outline-dark"
+                  onclick="pronounce('April')"
+                >
+                  <i class="fa-solid fa-volume-high"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item active text-center">
+            <div class="card">
+              <div class="mx-auto">
+                <img src="/images/months/may.png" class="d-block" alt="..." />
+              </div>
+              <div class="card-body bg-warning">
+                <h5 class="card-title">May</h5>
+                <button class="btn btn-outline-dark" onclick="pronounce('May')">
+                  <i class="fa-solid fa-volume-high"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item active text-center">
+            <div class="card">
+              <div class="mx-auto">
+                <img src="/images/months/july.png" class="d-block" alt="..." />
+              </div>
+              <div class="card-body bg-warning">
+                <h5 class="card-title">June</h5>
+                <button
+                  class="btn btn-outline-dark"
+                  onclick="pronounce('June')"
+                >
+                  <i class="fa-solid fa-volume-high"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item active text-center">
+            <div class="card">
+              <div class="mx-auto">
+                <img src="/images/months/july1.png" class="d-block" alt="..." />
+              </div>
+              <div class="card-body bg-warning">
+                <h5 class="card-title">July</h5>
+                <button
+                  class="btn btn-outline-dark"
+                  onclick="pronounce('July')"
+                >
+                  <i class="fa-solid fa-volume-high"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item active text-center">
+            <div class="card">
+              <div class="mx-auto">
+                <img
+                  src="/images/months/august.png"
+                  class="d-block"
+                  alt="..."
+                />
+              </div>
+              <div class="card-body bg-warning">
+                <h5 class="card-title">August</h5>
+                <button
+                  class="btn btn-outline-dark"
+                  onclick="pronounce('August')"
+                >
+                  <i class="fa-solid fa-volume-high"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item active text-center">
+            <div class="card">
+              <div class="mx-auto">
+                <img
+                  src="/images/months/september.png"
+                  class="d-block"
+                  alt="..."
+                />
+              </div>
+              <div class="card-body bg-warning">
+                <h5 class="card-title">September</h5>
+                <button
+                  class="btn btn-outline-dark"
+                  onclick="pronounce('September')"
+                >
+                  <i class="fa-solid fa-volume-high"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item active text-center">
+            <div class="card">
+              <div class="mx-auto">
+                <img
+                  src="/images/months/october.png"
+                  class="d-block"
+                  alt="..."
+                />
+              </div>
+              <div class="card-body bg-warning">
+                <h5 class="card-title">October</h5>
+                <button
+                  class="btn btn-outline-dark"
+                  onclick="pronounce('October')"
+                >
+                  <i class="fa-solid fa-volume-high"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item active text-center">
+            <div class="card">
+              <div class="mx-auto">
+                <img
+                  src="/images/months/november.png"
+                  class="d-block"
+                  alt="..."
+                />
+              </div>
+              <div class="card-body bg-warning">
+                <h5 class="card-title">November</h5>
+                <button
+                  class="btn btn-outline-dark"
+                  onclick="pronounce('November')"
+                >
+                  <i class="fa-solid fa-volume-high"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item active text-center">
+            <div class="card">
+              <div class="mx-auto">
+                <img
+                  src="/images/months/december.png"
+                  class="d-block"
+                  alt="..."
+                />
+              </div>
+              <div class="card-body bg-warning">
+                <h5 class="card-title">December</h5>
+                <button
+                  class="btn btn-outline-dark"
+                  onclick="pronounce('December')"
+                >
+                  <i class="fa-solid fa-volume-high"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+          <!-- <div class="carousel-item active text-center">
+            <div class="card">
+              <div class="mx-auto">
+                <img src="/images/months/months1-jan.png" class="d-block" alt="..." />
+              </div>
+              <div class="card-body bg-warning">
+                <h5 class="card-title">January</h5>
+                <button class="btn btn-outline-dark" onclick="pronounce('January')">
+                  <i class="fa-solid fa-volume-high"></i>
+                </button>
+              </div>
+            </div>
+          </div> -->
+        </div>
+        <button
+          class="carousel-control-prev"
+          type="button"
+          data-bs-target="#carouselExampleControls"
+          data-bs-slide="prev"
+        >
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button
+          class="carousel-control-next"
+          type="button"
+          data-bs-target="#carouselExampleControls"
+          data-bs-slide="next"
+        >
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Section Lesson End -->
+
+    <!-- Section Quiz -->
+
+    <div class="container-fluid text-center p-3">
+      <div class="row">
+        <div class="col-md-6 mx-auto my-auto align-items-center">
+          <div class="start-screen mt-5">
+            <button
+              class="btn btn-warning d-none m-5"
+              id="start-button"
+              onclick="startQuiz()"
+            >
+              Start
+            </button>
+          </div>
+          <div id="display-container" class="card p-3 d-none">
+            <div
+              class="header d-flex justify-content-between align-items-center border-bottom p-2"
+            >
+              <div class="number-of-count">
+                <span class="number-of-question">1 of 3 questions</span>
+              </div>
+              <div class="timer-div">
+                <!-- <img src="./images/common/timer.webp" width="20" alt="Timer" /> -->
+                <i class="fa-regular fa-clock"></i>
+                <span class="time-left">10s</span>
+              </div>
+            </div>
+            <div id="container">
+              <!-- questions and options will be displayed here -->
+            </div>
+            <button
+              id="next-button"
+              class="btn btn-warning col-md-6 mx-auto my-3"
+            >
+              Next
+            </button>
+          </div>
+          <div class="score-container d-none mt-5" id="score-container">
+            <div id="user-score" class="p-5">Demo Score</div>
+
+            <button id="restart" class="btn btn-warning">Restart</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.0/jquery.min.js"
+      integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+
+    <script src="../js/quiz.js"></script>
+
+    <script src="../js/speech.js"></script>
+    <script>
+      const quizArray = [
+        {
+          id: "0",
+          question:
+            '<img src="/images/months/november.png" class="d-block mx-auto" alt="..." />',
+          options: ["February", "March", "October", "November"],
+          correct: "November",
+        },
+        {
+          id: "1",
+          question:
+            '<img src="/images/months/july.png" class="d-block mx-auto" alt="..." />',
+
+          options: ["February", "March", "June", "january"],
+          correct: "June",
+        },
+        {
+          id: "2",
+          question:
+            '<img src="/images/months/august.png" class="d-block mx-auto" alt="..." />',
+
+          options: ["August", "Sectember", "june", "january"],
+          correct: "August",
+        },
+        {
+          id: "3",
+          question:
+            '<img src="/images/months/july1.png" class="d-block mx-auto" alt="..." />',
+
+          options: ["October", "July", "june", "january"],
+          correct: "July",
+        },
+      ];
+
+      $(document).ready(function () {
+        var multipleCardCarousel = $("#carouselExampleControls");
+        if (window.matchMedia("(min-width: 768px)").matches) {
+          var carousel = new bootstrap.Carousel(multipleCardCarousel[0], {
+            interval: false,
+          });
+          var carouselWidth = $(".carousel-inner")[0].scrollWidth;
+          var cardWidth = $(".carousel-item").width() * 3; // Multiply card width by 3 for sliding 3 cards
+          var scrollPosition = 0;
+          var maxScrollPosition = carouselWidth - $(".carousel-inner").width(); // Calculate the maximum scroll position
+
+          $("#carouselExampleControls .carousel-control-next").on(
+            "click",
+            function () {
+              if (scrollPosition < maxScrollPosition) {
+                // Check against the maximum scroll position
+                scrollPosition += cardWidth;
+                if (scrollPosition > maxScrollPosition) {
+                  // Adjust scrollPosition if it exceeds maxScrollPosition
+                  scrollPosition = maxScrollPosition;
+                }
+                $("#carouselExampleControls .carousel-inner").animate(
+                  { scrollLeft: scrollPosition },
+                  600
+                );
+              }
+            }
+          );
+
+          $("#carouselExampleControls .carousel-control-prev").on(
+            "click",
+            function () {
+              if (scrollPosition > 0) {
+                scrollPosition -= cardWidth;
+                if (scrollPosition < 0) {
+                  // Ensure scrollPosition doesn't go below 0
+                  scrollPosition = 0;
+                }
+                $("#carouselExampleControls .carousel-inner").animate(
+                  { scrollLeft: scrollPosition },
+                  600
+                );
+              }
+            }
+          );
+        } else {
+          multipleCardCarousel.addClass("slide");
+        }
+      });
+    </script>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

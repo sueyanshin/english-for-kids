@@ -33,8 +33,7 @@
     <script src="../js/speech.js"></script>
   </head>
   <body>
-    <!-- Navbar -->
-    <nav class="navbar bg-body-tertiary shadow-sm">
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
       <div class="container">
         <a class="navbar-brand" href="../index.html">
           <img
@@ -43,45 +42,121 @@
             class="d-inline-block align-text-top"
           />
         </a>
-
-        <div class="form-check form-switch form-check-reverse">
-          <input
-            class="form-check-input"
-            type="checkbox"
-            role="switch"
-            id="flexSwitchCheckDefault"
-            onchange="updateModelLabel(this)"
-          />
-          <label
-            class="form-check-label"
-            for="flexSwitchCheckDefault"
-            id="modeLabel"
-            >Learning Mode 👨‍🏫</label
-          >
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link" href="../index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="topics.html" aria-current="page"
+                >Topics</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="videos.html">Videos</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="audiobooks.html">Audiobooks</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="songs.html">Songs</a>
+            </li>
+          </ul>
         </div>
       </div>
     </nav>
 
     <!-- Section Lesson -->
-    <div class="sec-lesson container pt-5" id="sec-lesson">
-      <div class="row">
-        <div class="col-md-2" onclick="pronounce('c')">
-          <img src="/images/c.png" alt="" />
+    <div class="sec-lesson container pt-5 text-center" id="sec-lesson">
+      <div class="row justify-content-center">
+        <div class="col-md-2 pt-2" onclick="pronounce('A')">
+          <img src="/images/alphabets/a.png" alt="" />
         </div>
-        <div class="col-md-2" onclick="pronounce('south pat pal')">
-          <img src="/images/c.png" alt="" />
+        <div class="col-md-2 pt-2" onclick="pronounce('B')">
+          <img src="/images/alphabets/b.png" alt="" />
         </div>
-        <div class="col-md-2" onclick="pronounce('fay loe ma')">
-          <img src="/images/c.png" alt="" />
+        <div class="col-md-2 pt-2" onclick="pronounce('C')">
+          <img src="/images/alphabets/c.png" alt="c" />
         </div>
-        <div class="col-md-2" onclick="pronounce('south paw')">
-          <img src="/images/c.png" alt="" />
+        <div class="col-md-2 pt-2" onclick="pronounce('D')">
+          <img src="/images/alphabets/d.png" alt="" />
         </div>
-        <div class="col-md-2" onclick="pronounce('taw thar')">
-          <img src="/images/c.png" alt="" />
+        <div class="col-md-2 pt-2" onclick="pronounce('E')">
+          <img src="/images/alphabets/e.png" alt="" />
         </div>
-        <div class="col-md-2" onclick="pronounce('c')">
-          <img src="/images/c.png" alt="" />
+        <div class="col-md-2 pt-2" onclick="pronounce('F')">
+          <img src="/images/alphabets/f.png" alt="" />
+        </div>
+        <div class="col-md-2 pt-2" onclick="pronounce('G')">
+          <img src="/images/alphabets/g.png" alt="" />
+        </div>
+        <div class="col-md-2 pt-2" onclick="pronounce('H')">
+          <img src="/images/alphabets/h.png" alt="" />
+        </div>
+        <div class="col-md-2 pt-2" onclick="pronounce('I')">
+          <img src="/images/alphabets/i.png" alt="" />
+        </div>
+        <div class="col-md-2 pt-2" onclick="pronounce('J')">
+          <img src="/images/alphabets/j.png" alt="" />
+        </div>
+        <div class="col-md-2 pt-2" onclick="pronounce('K')">
+          <img src="/images/alphabets/k.png" alt="" />
+        </div>
+        <div class="col-md-2 pt-2" onclick="pronounce('l')">
+          <img src="/images/alphabets/l.png" alt="" />
+        </div>
+        <div class="col-md-2 pt-2" onclick="pronounce('m')">
+          <img src="/images/alphabets/m.png" alt="" />
+        </div>
+        <div class="col-md-2 pt-2" onclick="pronounce('n')">
+          <img src="/images/alphabets/n.png" alt="" />
+        </div>
+        <div class="col-md-2 pt-2" onclick="pronounce('o')">
+          <img src="/images/alphabets/o.png" alt="" />
+        </div>
+        <div class="col-md-2 pt-2" onclick="pronounce('p')">
+          <img src="/images/alphabets/p.png" alt="" />
+        </div>
+        <div class="col-md-2 pt-2" onclick="pronounce('q')">
+          <img src="/images/alphabets/q.png" alt="" />
+        </div>
+        <div class="col-md-2 pt-2" onclick="pronounce('r')">
+          <img src="/images/alphabets/r.png" alt="" />
+        </div>
+        <div class="col-md-2 pt-2" onclick="pronounce('s')">
+          <img src="/images/alphabets/s.png" alt="" />
+        </div>
+        <div class="col-md-2 pt-2" onclick="pronounce('t')">
+          <img src="/images/alphabets/t.png" alt="" />
+        </div>
+        <div class="col-md-2 pt-2" onclick="pronounce('u')">
+          <img src="/images/alphabets/u.png" alt="" />
+        </div>
+        <div class="col-md-2 pt-2" onclick="pronounce('v')">
+          <img src="/images/alphabets/v.png" alt="" />
+        </div>
+        <div class="col-md-2 pt-2" onclick="pronounce('w')">
+          <img src="/images/alphabets/w.png" alt="" />
+        </div>
+        <div class="col-md-2 pt-2" onclick="pronounce('x')">
+          <img src="/images/alphabets/x.png" alt="" />
+        </div>
+        <div class="col-md-2 pt-2" onclick="pronounce('y')">
+          <img src="/images/alphabets/y.png" alt="" />
+        </div>
+        <div class="col-md-2 pt-2" onclick="pronounce('z')">
+          <img src="/images/alphabets/z.png" alt="" />
         </div>
       </div>
     </div>
@@ -137,29 +212,41 @@
       const quizArray = [
         {
           id: "0",
-          question: "A",
+          question:
+            '<button class="btn btn-outline-dark" onclick="pronounce(\'C\')"><i class="fa-solid fa-volume-high"></i></button>',
+          options: ["B", "C", "D", "A"],
+          correct: "C",
+        },
+        {
+          id: "2",
+          question:
+            '<button class="btn btn-outline-dark" onclick="pronounce(\'C\')"><i class="fa-solid fa-volume-high"></i></button>',
+
           options: ["A", "B", "C", "D"],
           correct: "A",
         },
         {
-          id: "0",
-          question: "A",
+          id: "3",
+          question:
+            '<button class="btn btn-outline-dark" onclick="pronounce(\'C\')"><i class="fa-solid fa-volume-high"></i></button>',
+
           options: ["A", "B", "C", "D"],
           correct: "A",
         },
         {
-          id: "0",
-          question: "A",
-          options: ["A", "B", "C", "D"],
-          correct: "A",
-        },
-        {
-          id: "0",
-          question: "A",
+          id: "4",
+          question:
+            '<button class="btn btn-outline-dark" onclick="pronounce(\'C\')"><i class="fa-solid fa-volume-high"></i></button>',
+
           options: ["A", "B", "C", "D"],
           correct: "A",
         },
       ];
     </script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
   </body>
 </html>

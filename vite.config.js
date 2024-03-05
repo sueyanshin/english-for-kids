@@ -20,6 +20,12 @@ export default defineConfig({
 
         alphabets: resolve(__dirname, "level1/alphabets.html"),
         animals: resolve(__dirname, "level1/animals.html"),
+        colors: resolve(__dirname, "level1/colors.html"),
+        months: resolve(__dirname, "level1/month.html"),
+        face: resolve(__dirname, "level1/face-parts.html"),
+        number: resolve(__dirname, "level1/number.html"),
+        body: resolve(__dirname, "level1/body.html"),
+        // animals: resolve(__dirname, "level1/animals.html"),
       },
     },
   },
